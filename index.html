@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Inicio.css">
+    <title>Proyecto Zelko</title>
+</head>
+<body>
+    <header>
+        <a href="Fotos/Logo2.jpg" class="logo">Logo</a>
+            <ul>
+                <li><a href="index.html" id="active">Inicio</a></li>
+                <li><a href="biografia.html">Biografía</a></li>
+                <li><a href="encuesta.html">Encuesta</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+            </ul>
+    </header>
+    <section>
+        <img src="Fotos/stars.png" id="stars">
+        <img src="Fotos/moon.png" id="moon">
+        <img src="Fotos/mountains_behind.png" id="mountains_behind">
+        <h2 id="text">The Zelko</h2>
+        <a href="#sec" id="btn">¿De qué trata esta página?</a>
+        <img src="Fotos/mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Kevin Lowendry de Jesus Santana</h2>
+        <p>Bienvenidos a la página oficial de Kevin Lowendry, también conocido como "Zelko". En este sitio, descubrirás una fuente extensa de información sobre este intrigante personaje, incluyendo sus logros más notables y su influencia en la comunidad. La página ha sido diseñada para proporcionar una visión detallada de su trayectoria y vida personal, destacando de manera especial sus contribuciones y éxitos</p><br>
+        <p>Además de ser un sitio dedicado a Zelko, esta página también celebra su cumpleaños. Hemos incluido una sección especial de biografía que ofrece una mirada más cercana a su vida y experiencias. La encuesta interactiva te permite probar cuánto conoces sobre Zelko, y la galería de imágenes te ofrece una colección de fotos memorables y momentos importantes de su carrera.</p><br>
+        <p>Explora las diferentes secciones de la página, que incluyen la sesión de inicio, biografía, encuesta y galería de imágenes. Disfruta de una experiencia completa con información detallada, contenido interactivo y una presentación visualmente atractiva que resalta los colores y el estilo que caracterizan a Zelko. ¡Esperamos que disfrutes de tu visita y encuentres toda la información que buscas!
+        </p>
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px'; 
+            moon.style.top = value * 1.05 + 'px'; 
+            mountains_behind.style.top = value * 0.5 + 'px'; 
+            mountains_front.style.top = value * 0 + 'px'; 
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.Top = value * 0.5 + 'px';
+        })
+    </script>
+</body>
+</html>

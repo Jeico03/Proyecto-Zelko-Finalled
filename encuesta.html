@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta - Proyecto Zelko</title>
+    <link rel="stylesheet" href="encuesta.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="encuesta.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Encuesta sobre Kevin "Zelko" Santana</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="biografia.html">Biografía</a></li>
+            <li><a href="encuesta.html">Encuesta</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+        </ul>
+    </nav>
+    <!-- Resto del contenido de tu página -->
+</body>
+    <main>
+        <form id="encuesta-form">
+            <div class="question">
+                <label for="q1">1. ¿Cuál es el deporte favorito de Zelko?</label>
+                <select id="q1" name="q1" data-correct="basketball" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="basketball">Basketball</option>
+                    <option value="futbol">Fútbol</option>
+                    <option value="baseball">Baseball</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="q2">2. ¿Por qué Zelko tiene ese apodo?</label>
+                <select id="q2" name="q2" data-correct="relacion" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="famoso">Por un famoso que tiene dicho apodo</option>
+                    <option value="relacion">Por una relación amorosa pasada</option>
+                    <option value="deportes">Por ser demasiado bueno en los deportes</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="q3">3. ¿Cuál es la saga de películas favorita de Zelko?</label>
+                <select id="q3" name="q3" data-correct="guardianes" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="senor">El señor de los anillos</option>
+                    <option value="rapidos">Rápidos y furiosos</option>
+                    <option value="guardianes">Guardianes de la galaxia</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="q4">4. ¿Cuál es el color favorito de Zelko?</label>
+                <select id="q4" name="q4" data-correct="Morado y Negro" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="rojo">Rojo y Blanco</option>
+                    <option value="azul">Azul y Marron</option>
+                    <option value="verde">Verde y Amarillo</option>
+                    <option value="morado">Morado y Negro</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="q5">5. Zelko es más de...</label>
+                <select id="q5" name="q5" data-correct="Gatos" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="Gatos">Gatos</option>
+                    <option value="Perros">Perros</option>
+                    <option value="Conejos">Conejos</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="q6">6. ¿Cuál es la principal característica de Zelko?</label>
+                <select id="q6" name="q6" data-correct="Egocentrismo" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="pere">Pereza</option>
+                    <option value="Amabilidad">Amabilidad</option>
+                    <option value="Egocentrismo">Egocentrismo</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="q7">7. ¿Cuál es el lugar en el que Zelko quiere vivir?</label>
+                <select id="q7" name="q7" data-correct="Piantini" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="Chicago">Chicago, Estados Unidos</option>
+                    <option value="Piantini">Piantini, República Dominicana</option>
+                    <option value="Madrid">Madrid, España</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="q8">8. ¿Cuál es la canción favorita de Zelko?</label>
+                <select id="q8" name="q8" data-correct="Travis" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="Travis">FE!N de Travis Scott </option>
+                    <option value="Eladio">Mala Mía de Eladio Carrión ft. Miky Woods</option>
+                    <option value="reggaeton">Jezzy - PRESO A 30 </option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="q9">9. ¿Cuál es la serie favorita de Zelko?</label>
+                <select id="q9" name="q9" data-correct="Peaky" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="breakingbad">Breaking Bad</option>
+                    <option value="Peaky">Peaky Blinders</option>
+                    <option value="friends">Friends</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="q10">10. ¿Cuál es el sueño de Zelko?</label>
+                <select id="q10" name="q10" data-correct="streamer" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="streamer">Convertirse en streamer famoso</option>
+                    <option value="doctor">Convertirse en Actor Porno</option>
+                    <option value="ingeniero">Convertirse en ingeniero</option>
+                </select>
+            </div>
+            <button type="submit">Enviar Encuesta</button>
+        </form>
+<!-- Modal -->
+<div id="result-modal">
+    <div class="modal-content">
+        <h2 id="modal-message"></h2>
+        <p id="modal-score" class="score"></p>
+        <button id="close-modal">Cerrar</button>
+    </div>
+</div>
+
+    </main>
+    <!-- Contenedor para los efectos -->
+<div id="efectos">
+    <div class="particulas"></div>
+</div>
+
+</body>
+</html>

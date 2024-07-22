@@ -1,0 +1,402 @@
+/* Importación de fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+/* Body */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #1c0522, #2b1055); /* Degradado completo */
+    color: #fff;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Evitar scroll horizontal */
+}
+/* Header */
+header {
+    font-family: 'Orbitron', sans-serif;
+    background-color: #1c0522; /* Mismo color que el nav */
+    color: #ff9900;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+/* Nav */
+nav {
+    background-color: #1c0522;
+    color: #fff;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    font-family: 'Bebas Neue', sans-serif;
+    box-sizing: border-box;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff9900;
+}
+
+/* Estilo del mensaje de bienvenida */
+#welcome-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2b1055; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1001; /* Asegúrate de que esté encima del contador de visitas */
+}
+
+#welcome-popup .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #F0F3F4; /* Color de fondo del botón */
+    color: #2b1055; /* Color del icono del botón */
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#welcome-popup .close-btn:hover {
+    background-color: #2b1055; /* Color al pasar el ratón */
+    color: #F0F3F4; /* Color del icono al pasar el ratón */
+}
+
+/* Cuenta Regresiva */
+#cuenta-regresiva {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    margin: 20px auto;
+    max-width: 800px;
+    box-sizing: border-box;
+}
+
+#cuenta-regresiva h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ff9900;
+}
+
+#contador {
+    display: flex;
+    justify-content: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    color: #fff;
+    background: #2b1055;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+}
+
+#contador span {
+    margin: 0 10px;
+    display: inline-block;
+    padding: 10px;
+    background-color: #1c0522;
+    border-radius: 5px;
+}
+
+/* Sección de Comentarios */
+#comentarios {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin: 20px auto;
+    max-width: 800px;
+    box-sizing: border-box;
+}
+
+.comentarios-container {
+    margin: 0 auto;
+}
+
+#comentarios-list {
+    margin-bottom: 10px;
+}
+
+#comentario-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#comentario-form input, #comentario-form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#comentario-form button {
+    padding: 10px;
+    background: #ff9900;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#comentario-form button:hover {
+    background: #cc7a00;
+}
+
+#toggle-comments {
+    margin-top: 10px;
+}
+
+/* Sección de Biografía */
+#biografia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8)); /* Degradado de fondo */
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin: 20px auto;
+    max-width: 800px;
+    box-sizing: border-box;
+}
+
+#biografia h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem; /* Tamaño del título */
+    margin-bottom: 10px;
+}
+
+/* Estilos para la imagen de biografía */
+.biografia {
+    display: flex; /* Utiliza flexbox para alinear la imagen y el texto */
+    align-items: center; /* Alinea verticalmente la imagen y el texto */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    position: relative; /* Necesario para posicionar el pseudo-elemento */
+}
+
+.biografia img {
+    width: 100%; /* Ajusta el tamaño de la imagen según sea necesario */
+    max-width: 400px; /* Tamaño máximo para controlar el tamaño */
+    border-radius: 10px; /* Bordes redondeados sutiles */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transiciones para el efecto hover */
+    display: block; /* Asegura que la imagen sea un bloque */
+    position: relative; /* Necesario para el pseudo-elemento */
+}
+
+/* Estilos para la imagen de biografía */
+.biografia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Estilos para la imagen de biografía */
+.biografia img {
+    width: 100%; /* Ajusta el tamaño de la imagen según sea necesario */
+    max-width: 600px; /* Aumenta el tamaño máximo de la imagen */
+    border-radius: 10px; /* Bordes redondeados sutiles */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transiciones para el efecto hover */
+    display: block; /* Asegura que la imagen sea un bloque */
+    position: relative; /* Necesario para el pseudo-elemento */
+}
+
+
+/* Efecto de hover para la imagen */
+.biografia img:hover {
+    opacity: 0.8; /* Efecto de opacidad para dar un toque de profundidad */
+    transform: scale(1.05); /* Efecto de escalado para darle un leve aumento en el tamaño */
+}
+
+/* Imagen circular para biografía */
+.bio-content img {
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* Mantiene la proporción y recorta si es necesario */
+}
+
+.bio-content img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Sección de Gustos */
+#gustos {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    margin: 20px auto;
+    max-width: 800px;
+    box-sizing: border-box;
+}
+
+/* Títulos dentro de la sección de Gustos */
+#gustos h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+#gustos h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    color: #ff9900;
+    margin-bottom: 20px;
+}
+
+/* Párrafos */
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-size: 1.2rem; /* Aumentar tamaño del texto */
+    font-family: 'Barlow Condensed', sans-serif;
+    text-align: justify;
+    box-sizing: border-box;
+}
+
+/* Botón de Desplazamiento Suave hacia Arriba */
+#scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff9900;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: background-color 0.3s;
+}
+
+#scroll-to-top:hover {
+    background-color: #cc7a00;
+}
+
+/* Sección de Redes Sociales */
+#redes-sociales {
+    background: #1c0522;
+    color: #fff;
+    padding: 40px; /* Ajusta el padding según el diseño de otras secciones */
+    text-align: center;
+    border-top: 2px solid #2b1055;
+    position: relative;
+    margin: 0; /* Asegúrate de que no haya márgenes adicionales */
+    box-sizing: border-box;
+}
+
+/* Sección de Redes Sociales */
+#redes-sociales {
+    padding: 20px; /* Ajusta el padding según sea necesario */
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px; /* Bordes redondeados opcionales */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra opcional */
+    margin: 20px auto; /* Ajusta el margen según el diseño */
+    max-width: 800px; /* Ajusta el ancho máximo según tus necesidades */
+    text-align: center; /* Centra los íconos en la sección */
+    box-sizing: border-box;
+}
+
+/* Estilos para los iconos de redes sociales */
+#redes-sociales a {
+    display: inline-block;
+    margin: 0 10px; /* Espacio entre iconos */
+}
+
+#redes-sociales img {
+    width: 40px; /* Ajusta el tamaño del icono */
+    height: 40px; /* Mantén la proporción de los iconos */
+    transition: transform 0.3s ease; /* Transición para efectos de hover */
+}
+
+/* Efecto de hover para los iconos de redes sociales */
+#redes-sociales a:hover img {
+    transform: scale(1.1); /* Escalado de los iconos al pasar el ratón */
+}
+
+
+/* Estilos generales para el contador de visitas */
+#visitas-section {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+#contador-visitas {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #212F3D; /* Color de fondo oscuro y sobrio */
+    color: #fff; /* Texto blanco para buen contraste */
+    padding: 10px 15px;
+    border-radius: 8px; /* Bordes redondeados para un toque moderno */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra sutil para darle profundidad */
+    font-family: 'EB Garamond', serif; /* Fuente elegante y legible */
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    z-index: 1000; /* Asegura que el contador esté sobre otros elementos */
+    border: 1px solid #2b1055; /* Borde sutil en un color similar al fondo para definir el contenedor */
+}
+
+#contador-visitas p {
+    margin: 0;
+    font-size: 16px; /* Tamaño de texto moderado */
+    font-weight: 500; /* Peso de fuente medio para una buena visibilidad */
+}
+
+#contador-visitas span#visitas {
+    font-size: 20px; /* Tamaño de número ligeramente mayor para destacar */
+    font-weight: bold; /* Negrita para el número de visitas */
+}
+

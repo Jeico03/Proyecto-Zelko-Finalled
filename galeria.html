@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Imágenes</title>
+    <link rel="stylesheet" href="galeria.css">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Galería de imagenes</h1>
+    </header>
+    <div id="particles" class="particles"></div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="biografia.html">Biografía</a></li>
+            <li><a href="encuesta.html">Encuesta</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+        </ul>
+    </nav>
+    <div class="gallery-container">
+        <div class="gallery">
+            <img src="Fotos/G1.jpg" alt="Imagen 1" onclick="openModal(this)">
+            <img src="Fotos/G2.jpg" alt="Imagen 2" onclick="openModal(this)">
+            <img src="Fotos/G3.jpg" alt="Imagen 3" onclick="openModal(this)">
+            <img src="Fotos/G4.jpg" alt="Imagen 4" onclick="openModal(this)">
+            <img src="Fotos/G5.jpg" alt="Imagen 5" onclick="openModal(this)">
+            <img src="Fotos/G6.jpg" alt="Imagen 6" onclick="openModal(this)">
+            <img src="Fotos/G7.jpg" alt="Imagen 7" onclick="openModal(this)">
+            <img src="Fotos/G8.jpg" alt="Imagen 8" onclick="openModal(this)">
+            <img src="Fotos/B1.jpg" alt="Imagen 9" onclick="openModal(this)">
+            <img src="Fotos/B2.jpg" alt="Imagen 10" onclick="openModal(this)">
+            <img src="Fotos/B3.jpg" alt="Imagen 11" onclick="openModal(this)">
+            <img src="Fotos/M1.jpg" alt="Imagen 12" onclick="openModal(this)">
+            <img src="Fotos/M2.jpg" alt="Imagen 13" onclick="openModal(this)">
+            <img src="Fotos/y3z_23_1721621406834.jpeg" alt="Imagen 14" onclick="openModal(this)">
+            <img src="Fotos/zelko.jpeg" alt="Imagen 15" onclick="openModal(this)">
+        </div>
+    </div>
+
+    <!-- Modal para mostrar imagenes -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script src="galeria.js"></script>
+</body>
+</html>

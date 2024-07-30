@@ -12,13 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('visitas').textContent = visitas;
 });
 
-// Reiniciar contador de visitas
-localStorage.removeItem('visitas');
-
-// Inicializar visitas a 0
-document.getElementById('visitas').textContent = 0;
-
-
 // Mostrar el popup de bienvenida
 const popup = document.getElementById('welcome-popup');
 const closePopupBtn = document.getElementById('close-popup');
@@ -85,7 +78,7 @@ if (comentarioForm) {
 // Cuenta regresiva
 const cuentaRegresiva = document.getElementById('cuenta-regresiva');
 if (cuentaRegresiva) {
-    const evento = new Date('2024-07-23T00:00:00').getTime();
+    const evento = new Date('2025-07-23T00:00:00').getTime();
     const intervalo = setInterval(() => {
         const ahora = new Date().getTime();
         const distancia = evento - ahora;
